@@ -1,5 +1,5 @@
 # Guide
-西南大学软件研究与创新中心网站开发指南 
+西南大学软件研究与创新中心网站开发指南.
 项目仓库=>技术栈=>学习资料
 ## 项目仓库
 * 文档托管：<a href="https://github.com/RISE-SWU/Guide">https://github.com/RISE-SWU/Guide</a>
