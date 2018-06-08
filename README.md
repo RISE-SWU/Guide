@@ -3,8 +3,10 @@
 项目仓库=>技术栈=>学习资料
 ## 项目仓库
 * 文档托管：<a href="https://github.com/RISE-SWU/Guide">https://github.com/RISE-SWU/Guide</a>
- * RISE实验室网站前端：<a href="https://github.com/RISE-SWU/RiseLabFE">https://github.com/RISE-SWU/RiseLabFE</a>
+* RISE实验室网站前端：<a href="https://github.com/RISE-SWU/RiseLabFE">https://github.com/RISE-SWU/RiseLabFE</a>
 * RISE实验室GraphQL服务: <a href="https://github.com/RISE-SWU/RiseLabGraphQL">https://github.com/RISE-SWU/RiseLabGraphQL</a>
+* RISE实验室中文网站API文档：
+
 ## 技术栈
 
 ### 前端
