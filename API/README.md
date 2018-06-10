@@ -47,7 +47,8 @@ Response:
                 password: 'fcc',
                 type: 1,
                 createTime: '2015-08-17'
-            }
+            },
+            ...
         ]
    }
     
@@ -117,4 +118,88 @@ Response:
         status: 'success' | 'error'  
     }
 
+```
+
+## <hr></hr>
+
+## 建表newsListCn
+
+字段 | 类型 | 说明 | 例子
+-| :-: | :-: | :-: | :-:
+id | Interger| 主键，自增 | 23
+title | String | 新闻标题 | 'xxxxxxx'
+author | String | 新闻发布者 | 'rise_admin'
+tag | String | 新闻标签 | '出访'
+status | Interger | 发布状态 | 0或者1
+createTime | String | 新闻创建时间 | '2012-09-21'
+uploadTime | String | 新闻创建时间 | '2015-05-23'
+views | Interger | 该新闻访问人数 | 223
+
+
+### 新闻列表展示，访问地址： /main/news
+
+```
+    Method:
+        get
+    Request:
+        url: /api/news
+    Response:
+        data: {
+            status: 'success',
+            dataList: [
+                {
+                    author:"towguryiac",
+                    createTime:"1981-07-02",
+                    id:1,
+                    status:1,
+                    tag:"成权",
+                    title:"队系还响种声拉六思建产得青究市院",
+                    uploadTime:"2002-01-13",
+                },
+                {
+                    author:"towgFc",
+                    createTime:"1911-07-02",
+                    id:23,
+                    status:0,
+                    tag:"试试",
+                    title:"队系还GV兜风思建产得青究市院",
+                    uploadTime:"2008-01-13",
+                },
+                ...
+            ]
+        }
+```
+### 新闻批量删除/批量发布
+
+```
+    Method: 
+        Post
+    Request:
+        删除url: /api/news/delete
+        发布url: /api/news/upload
+
+        data: [
+            {
+                author:"towguryiac",
+                createTime:"1981-07-02",
+                id:1,
+                status:1,
+                tag:"成权",
+                title:"队系还响种声拉六思建产得青究市院",
+                uploadTime:"2002-01-13",
+            },
+            {
+                author:"towgFc",
+                createTime:"1911-07-02",
+                id:23,
+                status:0,
+                tag:"试试",
+                title:"队系还GV兜风思建产得青究市院",
+                uploadTime:"2008-01-13",
+            },
+        ],
+    Response: 
+        data: {
+            status: 'success' | 'error'
+        }
 ```
