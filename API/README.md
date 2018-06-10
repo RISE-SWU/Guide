@@ -132,7 +132,7 @@ author | String | 新闻发布者 | 'rise_admin'
 tag | String | 新闻标签 | '出访'
 status | Interger | 发布状态 | 0或者1
 createTime | String | 新闻创建时间 | '2012-09-21'
-uploadTime | String | 新闻创建时间 | '2015-05-23'
+uploadTime | String | 新闻发布时间 | '2015-05-23'
 views | Interger | 该新闻访问人数 | 223
 待续 | 待续 | 待续 | 待续
 
