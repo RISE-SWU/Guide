@@ -125,16 +125,16 @@ Response:
 ## 建表newsListCn
 
 字段 | 类型 | 说明 | 例子
--| :-: | :-: | :-: | :-:
-id | Interger| 主键，自增 | 23
+------------ | ------------- | ------------ | -------------
+id | Interger | 主键，自增 | 23
 title | String | 新闻标题 | 'xxxxxxx'
 author | String | 新闻发布者 | 'rise_admin'
 tag | String | 新闻标签 | '出访'
 status | Interger | 发布状态 | 0或者1
 createTime | String | 新闻创建时间 | '2012-09-21'
-uploadTime | String | 新闻创建时间 | '2015-05-23'
+uploadTime | String | 新闻发布时间 | '2015-05-23'
 views | Interger | 该新闻访问人数 | 223
-
+待续 | 待续 | 待续 | 待续
 
 ### 新闻列表展示，访问地址： /main/news
 
@@ -202,4 +202,53 @@ views | Interger | 该新闻访问人数 | 223
         data: {
             status: 'success' | 'error'
         }
+```
+
+## <hr />
+
+后台管理页面首页，访问地址'/main/'
+
+```
+    Method: 
+        Get
+    Request:
+       url: 
+            /api/getIndex
+    Response: 
+        data {
+            status: 'success' | 'error',
+            dataList: {
+                total: {
+                    //发布的新闻总数
+                    news: 20,
+                    //管理员账户数量
+                    admin: 23,
+                    //用户账户数量
+                    account: 52
+                    //头图数量
+                    picture: 25
+                },
+                //记录最近登录的5个账号
+                inspect: [
+                    {
+                        //账号类型
+                        type: 0 | 1,
+                        userName : 'rise_admin',
+                        date: 2017-05-21,
+                        time: xx-xx-xx
+                    },
+                    ...
+                ],
+                //最近发布的10条新闻
+                activity: [
+                    {
+                        title： 'ccccccc',
+                        author: 'xxxxx',
+                        uploadTime: 'xxxx-xx-xx',
+                        id: 21
+                    }   
+                ]
+            }
+        }
+    
 ```
