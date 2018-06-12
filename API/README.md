@@ -203,3 +203,55 @@ views | Interger | 该新闻访问人数 | 223
             status: 'success' | 'error'
         }
 ```
+
+
+##<hr> <hr/>
+
+### 后台管理页面首页，访问地址'/main/'
+
+```
+    Method: 
+        Get
+    Request:
+       url: 
+            /api/getIndex
+    Response: 
+        data {
+            status: 'success' | 'error',
+            dataList: {
+                total: {
+                    //发布的新闻总数
+                    news: 20,
+                    //管理员账户数量
+                    admin: 23,
+                    //用户账户数量
+                    account: 52
+                    //头图数量
+                    picture: 25
+                },
+                //记录最近登录的5个账号
+                inspect: [
+                    {
+                        //账号类型
+                        type: 0 | 1,
+                        userName : 'rise_admin',
+                        date: 2017-05-21,
+                        time: xx-xx-xx
+                    },
+                    ...
+                ],
+                //最近发布的10条新闻
+                activity: [
+                    {
+                        title： 'ccccccc',
+                        author: 'xxxxx',
+                        uploadTime: 'xxxx-xx-xx',
+                        id: 21
+                    }   
+                ]
+            }
+        }
+    
+```
+=======
+
