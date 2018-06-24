@@ -1,5 +1,6 @@
 
 
+
 # API文档
 
 ## 中文网站后台API
@@ -253,5 +254,72 @@ views | Interger | 该新闻访问人数 | 223
         }
     
 ```
+<hr />
+
+### 新闻发布 / 编辑页面，访问地址 /main/edit?id=xx
+
+页面信息显示，id为-1代表新建一篇新闻，此时不会发出请求
+
+```
+    Method: 
+        Get
+    Request:
+        Url:
+            /api/news/edit?id=xxx
+    Response:
+        data: {
+                status: 'success',
+                news: {
+                    title: 'xxxxx',
+                    author: 'rise_admin',
+                    tag: '出访',
+                    createTime: '2015-12-03',
+                    content: `<p style="color: red">一条大财后</p>`,
+                    uploadTime: '2018-09-08'
+                }
+            }
+```
+
+图片上传
+
+```
+    Method:
+        post
+    Request:
+        url
+            /api/upload/image
+        data
+            FormData类型的图片
+            multipart/form-data; boundary=----WebKitFormBoundaryzArATUyyahlOCQlC
+    Response:
+        data {
+            url: './xx/xx/xx.jpg' //服务器上可以直接访问的图片地址，需要跨域
+        }
+
+```
+文章信息发布、保存
+```
+Method: 
+    Post
+Request:
+    url
+        /api/news/publish
+    data: {
+        newsDetail: {
+            type: -1 | 0
+            content: 'xxx',
+            id: 3,
+            tag: 'xxx',
+            author: 'xxx',
+            title: 'xxx'
+        }
+    }
+    //-1 代表保存新闻，不发布， 0代表直接发布，后台需要自己将创建时间和发布时间保存到数据库，如果类型是-1代表是保存新闻，这时候更新createTime字段并保存，并将发布时间重置为空，如果是0的话，更新uploadTime字段并保存，如果是新建新闻并直接发布，此时createTime和uploadTime保持一致并保存到数据库
+Response:
+    data: {
+        status: 'success'
+    }
+```
+=======
 
 
