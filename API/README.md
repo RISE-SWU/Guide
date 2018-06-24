@@ -255,6 +255,18 @@ views | Interger | 该新闻访问人数 | 223
     
 ```
 <hr />
+### 用户登出
+```
+    Method： 
+        Get
+    Request:
+        url:
+            api/account/loginout
+    Response:
+           data {
+               status: 'success'
+           } 
+```
 
 ### 新闻发布 / 编辑页面，访问地址 /main/edit?id=xx
 
